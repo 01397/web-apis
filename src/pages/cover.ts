@@ -1,5 +1,8 @@
-const content = `<section class="slide cover">
-  <h1>Web APIs</h1>
-</section>`;
+import type { PageDefinition } from '../types';
 
-export { content };
+export const coverPage: PageDefinition = {
+  content: `
+<section class="slide cover">
+  <h1>Web APIs</h1>
+</section>`,
+};
