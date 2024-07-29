@@ -1,7 +1,19 @@
 import './style.css';
 import { coverPage } from './pages/cover';
+import { deviceStatusAPIsPage } from './pages/device-status-apis';
+import hljs from 'highlight.js';
+import 'highlight.js/styles/github.css';
 
-const pages = [coverPage];
-const currentPage = 0;
+const app = document.querySelector<HTMLDivElement>('#app')!;
+const pages = [coverPage, deviceStatusAPIsPage];
+const currentPage = pages.length - 1;
 
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = pages[currentPage].content;
+const showpage = (page: number) => {
+  app.innerHTML = pages[page].content;
+  app.querySelectorAll<HTMLElement>('pre code').forEach((element) => {
+    hljs.highlightElement(element);
+  });
+  pages[page].onShow?.();
+};
+
+showpage(currentPage);
