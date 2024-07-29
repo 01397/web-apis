@@ -1,3 +1,7 @@
 import './style.css'
+import * as cover from './pages/cover'
 
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = `Hello World`
+const pages = [cover];
+const currentPage = 0;
+
+document.querySelector<HTMLDivElement>('#app')!.innerHTML = pages[currentPage].content;

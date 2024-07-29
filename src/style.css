@@ -3,10 +3,33 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: 1dvw;
 }
 
 /* Set default font and color */
 body {
   font-family: Arial, sans-serif;
   color: #333;
+  background-color: #eee;
+}
+
+.slide {
+  margin: 1dvw;
+  background-color: #fff;
+  box-shadow: 0 0 4dvw -1dvw rgba(0, 0, 0, 0.5);
+  border: 1px solid #cdd;
+  border-radius: 2dvw;
+  padding: 2dvw;
+  aspect-ratio: 16 / 9;
+
+  h1 {
+    font-size: 8rem;
+    margin-bottom: 1rem;
+  }
+
+  &.cover {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
