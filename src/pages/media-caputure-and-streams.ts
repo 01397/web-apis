@@ -1,4 +1,5 @@
 import type { PageDefinition } from '../types';
+import { getStream, setConstraints, stopStream } from '../util/usermedia';
 
 export const mediaCaptureAndStreamsPage: PageDefinition = {
   content: `
@@ -43,16 +44,15 @@ videoElement.srcObject = stream</code></pre>
     });
 
     startButton.onclick = async () => {
-      const stream = await navigator.mediaDevices.getUserMedia({
+      setConstraints({
         video: { deviceId: camera.value ? { exact: camera.value } : undefined },
         audio: { deviceId: microphone.value ? { exact: microphone.value } : undefined },
       });
-      video.srcObject = stream;
+      video.srcObject = await getStream();
     };
 
     stopButton.onclick = async () => {
-      const stream = video.srcObject as MediaStream;
-      stream.getTracks().forEach((track) => track.stop());
+      stopStream();
       video.srcObject = null;
     };
   },
