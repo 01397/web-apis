@@ -1,17 +1,19 @@
 import './style.css';
 import { coverPage } from './pages/cover';
-import { deviceStatusAPIsPage } from './pages/device-status-apis';
 import { mediaCaptureAndStreamsPage } from './pages/media-caputure-and-streams';
 import { shapeDetectionApiPage } from './pages/shape-detection-api';
 import { webAudioApiPage } from './pages/web-audio-api';
 import hljs from 'highlight.js';
 import 'highlight.js/styles/github.css';
 import { gamepadApiPage } from './pages/gamepad-api';
+import { batteryAPI } from './pages/battery-api';
+import { networkInformationAPI } from './pages/network-information-api';
 
 const app = document.querySelector<HTMLDivElement>('#app')!;
 const pages = [
   coverPage,
-  deviceStatusAPIsPage,
+  batteryAPI,
+  networkInformationAPI,
   mediaCaptureAndStreamsPage,
   shapeDetectionApiPage,
   webAudioApiPage,
