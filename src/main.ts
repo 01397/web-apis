@@ -3,11 +3,12 @@ import { coverPage } from './pages/cover';
 import { deviceStatusAPIsPage } from './pages/device-status-apis';
 import { mediaCaptureAndStreamsPage } from './pages/media-caputure-and-streams';
 import { shapeDetectionApiPage } from './pages/shape-detection-api';
+import { webAudioApiPage } from './pages/web-audio-api';
 import hljs from 'highlight.js';
 import 'highlight.js/styles/github.css';
 
 const app = document.querySelector<HTMLDivElement>('#app')!;
-const pages = [coverPage, deviceStatusAPIsPage, mediaCaptureAndStreamsPage, shapeDetectionApiPage];
+const pages = [coverPage, deviceStatusAPIsPage, mediaCaptureAndStreamsPage, shapeDetectionApiPage, webAudioApiPage];
 let currentPage = pages.length - 1;
 
 const showpage = (page: number) => {
