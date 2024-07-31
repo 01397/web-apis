@@ -6,9 +6,17 @@ import { shapeDetectionApiPage } from './pages/shape-detection-api';
 import { webAudioApiPage } from './pages/web-audio-api';
 import hljs from 'highlight.js';
 import 'highlight.js/styles/github.css';
+import { gamepadApiPage } from './pages/gamepad-api';
 
 const app = document.querySelector<HTMLDivElement>('#app')!;
-const pages = [coverPage, deviceStatusAPIsPage, mediaCaptureAndStreamsPage, shapeDetectionApiPage, webAudioApiPage];
+const pages = [
+  coverPage,
+  deviceStatusAPIsPage,
+  mediaCaptureAndStreamsPage,
+  shapeDetectionApiPage,
+  webAudioApiPage,
+  gamepadApiPage,
+];
 let currentPage = pages.length - 1;
 
 const showpage = (page: number) => {
