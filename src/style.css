@@ -14,11 +14,9 @@ body {
 }
 
 .slide {
-  margin: 1dvw;
   background-color: #fff;
   box-shadow: 0 0 4dvw -1dvw rgba(0, 0, 0, 0.5);
   border: 1px solid #cdd;
-  border-radius: 2dvw;
   padding: 2dvw;
   aspect-ratio: 16 / 9;
   display: flex;
@@ -38,7 +36,8 @@ body {
   p {
     font-size: 1.2rem;
   }
-  ul, ol {
+  ul,
+  ol {
     padding-left: 2rem;
   }
   li {
@@ -68,7 +67,7 @@ body {
     display: flex;
     gap: 1rem;
     align-items: flex-start;
-    &>* {
+    & > * {
       flex: 1;
       display: flex;
       flex-direction: column;
@@ -79,4 +78,12 @@ body {
   &.cover {
     justify-content: center;
   }
+}
+
+.page-number {
+  text-align: right;
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #666;
 }

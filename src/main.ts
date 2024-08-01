@@ -8,6 +8,7 @@ import 'highlight.js/styles/github.css';
 import { gamepadApiPage } from './pages/gamepad-api';
 import { batteryAPI } from './pages/battery-api';
 import { networkInformationAPI } from './pages/network-information-api';
+import { finishPage } from './pages/finish';
 
 const app = document.querySelector<HTMLDivElement>('#app')!;
 const pages = [
@@ -18,11 +19,12 @@ const pages = [
   shapeDetectionApiPage,
   webAudioApiPage,
   gamepadApiPage,
+  finishPage,
 ];
 let currentPage = 0;
 
 const showpage = (page: number) => {
-  app.innerHTML = pages[page].content;
+  app.innerHTML = pages[page].content + `<div class="page-number">${page + 1}</div>`;
   app.querySelectorAll<HTMLElement>('pre code').forEach((element) => {
     hljs.highlightElement(element);
   });
