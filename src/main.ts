@@ -9,12 +9,14 @@ import { gamepadApiPage } from './pages/gamepad-api';
 import { batteryAPI } from './pages/battery-api';
 import { networkInformationAPI } from './pages/network-information-api';
 import { finishPage } from './pages/finish';
+import { historyAPIPage } from './pages/history-api';
 
 const app = document.querySelector<HTMLDivElement>('#app')!;
 const pages = [
   coverPage,
   batteryAPI,
   networkInformationAPI,
+  historyAPIPage,
   mediaCaptureAndStreamsPage,
   shapeDetectionApiPage,
   webAudioApiPage,
