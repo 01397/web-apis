@@ -41,6 +41,7 @@ const url = barcodes[0].rawValue;</code></pre>
       const barcodes = await barcodeDetector.detect(video);
       results.innerHTML = barcodes
         .map(
+          // @ts-ignore
           (barcode) => `rawValue: ${barcode.rawValue}
 format: ${barcode.format}`
         )

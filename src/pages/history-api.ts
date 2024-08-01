@@ -37,14 +37,3 @@ export const historyAPIPage: PageDefinition = {
     });
   },
 };
-
-const getBattery = async () => {
-  // @ts-ignore
-  const battery = await navigator.getBattery();
-
-  document.getElementById('battery-result')!.innerHTML = `level: ${battery.level}
-charging: ${battery.charging}
-chargingTime: ${battery.chargingTime}
-dischargingTime: ${battery.dischargingTime}
-`;
-};
