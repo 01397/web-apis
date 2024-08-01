@@ -3,10 +3,12 @@ import type { PageDefinition } from '../types';
 export const batteryAPI: PageDefinition = {
   content: `
 <section class="slide">
-  <h2>Battery API</h2>
+  <h2>Battery StatusAPI</h2>
   <div class="multi-column-container">
     <div>
+      <p>Get a device's battery status.</p>
       <pre><code class="language-javascript">const battery = await navigator.getBattery();</code></pre>
+      <p>No permission is required!</p>
     </div>
     <div class="demo">
       <pre class="demo-code" id="battery-result"></pre>

@@ -19,7 +19,7 @@ const pages = [
   webAudioApiPage,
   gamepadApiPage,
 ];
-let currentPage = pages.length - 1;
+let currentPage = 0;
 
 const showpage = (page: number) => {
   app.innerHTML = pages[page].content;
@@ -36,6 +36,6 @@ document.addEventListener('keydown', (event) => {
     currentPage = Math.max(currentPage - 1, 0);
   }
   showpage(currentPage);
-})
+});
 
 showpage(currentPage);

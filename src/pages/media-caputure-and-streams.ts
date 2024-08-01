@@ -10,6 +10,7 @@ export const mediaCaptureAndStreamsPage: PageDefinition = {
       <p>Get a MediaStream and attach it to a video element.</p>
       <pre><code class="language-javascript">const stream = await navigator.mediaDevices.getUserMedia(constraints);
 videoElement.srcObject = stream</code></pre>
+      <img src="video-streaming.gif" alt="Video streaming" style="width: 100%; max-width: 30rem;">
     </div>
     <div class="demo">
       <video id="video" autoplay playsinline></video>

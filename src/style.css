@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: 1.2dvw;
+  font-size: 1.4dvw;
 }
 
 /* Set default font and color */
@@ -35,12 +35,25 @@ body {
   h3 {
     font-size: 2rem;
   }
-  code.hljs {
+  p {
+    font-size: 1.2rem;
+  }
+  ul, ol {
+    padding-left: 2rem;
+  }
+  li {
+    margin-bottom: 0.5rem;
+  }
+  code {
     background-color: #f8f8f8;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    overflow-x: auto;
-    line-height: 1.5;
+    padding: 0.2rem 0.3rem;
+    border-radius: 0.2rem;
+    &.hljs {
+      padding: 1rem;
+      border-radius: 0.5rem;
+      line-height: 1.5;
+      overflow-x: auto;
+    }
   }
 
   .demo {
@@ -54,6 +67,7 @@ body {
   .multi-column-container {
     display: flex;
     gap: 1rem;
+    align-items: flex-start;
     &>* {
       flex: 1;
       display: flex;
